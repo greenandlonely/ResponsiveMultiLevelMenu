@@ -26,7 +26,7 @@
 	margin-right: 100px;
 }
 
-.dl-menuwrapper button {
+.dl-trigger-button {
 	background: #ccc;
 	border: none;
 	width: 48px;
@@ -38,13 +38,13 @@
 	outline: none;
 }
 
-.dl-menuwrapper button:hover,
-.dl-menuwrapper button.dl-active,
+.dl-trigger-button:hover,
+.dl-trigger-button.dl-active,
 .dl-menuwrapper ul {
 	background: #aaa;
 }
 
-.dl-menuwrapper button:after {
+.dl-trigger-button:after {
 	content: '';
 	position: absolute;
 	width: 68%;
@@ -112,7 +112,7 @@
 }
 
 .dl-menuwrapper .dl-menu {
-	margin: 5px 0 0 0;
+	margin: 0;
 	position: absolute;
 	width: 100%;
 	opacity: 0;
@@ -164,7 +164,7 @@ All this is done for any sub-level being entered.
 .dl-menuwrapper > .dl-submenu {
 	position: absolute;
 	width: 100%;
-	top: 50px;
+	top: 0;
 	left: 0;
 	margin: 0;
 }
@@ -332,12 +332,12 @@ All this is done for any sub-level being entered.
 /* Colors for demos */
 
 /* Demo 1 */
-.demo-1 .dl-menuwrapper button {
+.demo-1 .dl-trigger-button {
 	background: #c62860;
 }
 
-.demo-1 .dl-menuwrapper button:hover,
-.demo-1 .dl-menuwrapper button.dl-active,
+.demo-1 .dl-trigger-button:hover,
+.demo-1 .dl-trigger-button.dl-active,
 .demo-1 .dl-menuwrapper ul {
 	background: #9e1847;
 }

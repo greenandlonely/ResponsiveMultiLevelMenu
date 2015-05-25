@@ -71,7 +71,7 @@ a:hover {
 	position: relative;
 }
 
-.column:nth-child(2) {
+.column:nth-child(1) {
 	min-height: 400px;
 	box-shadow: -1px 0 0 rgba(0,0,0,0.1);
 	background: url(../images/clickhere.png) 90px 0 no-repeat;

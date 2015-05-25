@@ -29,6 +29,7 @@
 		// callback: click a link that does not have a sub menu
 		// el is the link element (li); ev is the event obj
 		onLinkClick : function( el, ev ) { return false; },
+        //
 		backLabel: 'Back',
 		// Change to "true" to use the active item as back link label.
 		useActiveItemAsBackLabel: false,
@@ -83,7 +84,7 @@
 		},
 		_config : function() {
 			this.open = false;
-			this.$trigger = this.$el.children( '.dl-trigger' );
+			this.$trigger = $( '.dl-trigger' );
 			this.$menu = this.$el.children( 'ul.dl-menu' );
             this.$menu.hide();
             this.$el.css('z-index', '9999');
@@ -119,9 +120,9 @@
 				else {
 					self._openMenu();
 					// clicking somewhere else makes the menu close
-					$body.off( 'click' ).children().on( 'click.dlmenu', function() {
-						self._closeMenu() ;
-					} );
+					//$body.off( 'click' ).children().on( 'click.dlmenu', function() {
+					//	self._closeMenu() ;
+					//} );
 				}
 				return false;
 			} );
@@ -203,11 +204,6 @@
 			} );
 
 		},
-		closeMenu : function() {
-			if( this.open ) {
-				this._closeMenu();
-			}
-		},
 		_closeMenu : function() {
 			var self = this,
 				onTransitionEndFn = function() {
@@ -231,20 +227,15 @@
 
 			this.open = false;
 		},
-		openMenu : function() {
-			if( !this.open ) {
-				this._openMenu();
-			}
-		},
 		_openMenu : function() {
 			var self = this;
 
             this.$menu.show();
 
 			// clicking somewhere else makes the menu close
-			$body.off( 'click' ).on( 'click.dlmenu', function() {
-				self._closeMenu() ;
-			} );
+			//$body.off( 'click' ).on( 'click.dlmenu', function() {
+			//	self._closeMenu() ;
+			//} );
 			this.$menu.addClass( 'dl-menuopen dl-menu-toggle' ).on( this.transEndEventName, function() {
 				$( this ).removeClass( 'dl-menu-toggle' );
 			} );
