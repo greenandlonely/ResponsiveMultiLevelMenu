@@ -120,9 +120,9 @@
 				else {
 					self._openMenu();
 					// clicking somewhere else makes the menu close
-					//$body.off( 'click' ).children().on( 'click.dlmenu', function() {
-					//	self._closeMenu() ;
-					//} );
+					$body.off( 'click' ).children().on( 'click.dlmenu', function() {
+						self._closeMenu() ;
+					} );
 				}
 				return false;
 			} );
@@ -233,9 +233,9 @@
             this.$menu.show();
 
 			// clicking somewhere else makes the menu close
-			//$body.off( 'click' ).on( 'click.dlmenu', function() {
-			//	self._closeMenu() ;
-			//} );
+			$body.off( 'click' ).on( 'click.dlmenu', function() {
+				self._closeMenu() ;
+			} );
 			this.$menu.addClass( 'dl-menuopen dl-menu-toggle' ).on( this.transEndEventName, function() {
 				$( this ).removeClass( 'dl-menu-toggle' );
 			} );
